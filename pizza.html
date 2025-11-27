@@ -1,21 +1,20 @@
-<script>  
-    window.RufflePlayer = window.RufflePlayer || {};
-    window.addEventListener("load", (event) => {
-        const ruffle = window.RufflePlayer.newest();
-        const player = ruffle.createPlayer();
-        const container = document.getElementById("container");
-        container.appendChild(player);
-        player.ruffle().load("pizza.swf");
-    });
-</script>
-<script src="ruffle.js"></script>
-
-<object width="500" height="400">
-
-    // You should replace somefilename with 
-    // your own filepath or URL of your file
-    <param name="pizza" value="pizza.html">
-    <embed src="pizza.swf" 
-        width="500" height="400">
-    </embed>
-</object>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Ruffle Example">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <title>Ruffle Example</title>
+  <script src="ruffle.js"></script>
+  <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
+    supports it.</noscript>
+</head>
+<body>
+<div id='ruffle' class="gameloc"></div>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<script id = "gabe">swfobject.embedSWF("pizza.swf", 'ruffle', 800, 600);</script>
+</body>
+</html>
